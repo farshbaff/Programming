@@ -48,4 +48,19 @@ public class MathematicsServiceTest
         //Assert
         Assert.Equal(expected, actual);
     }
+
+    [Theory]
+    [InlineData(1, 1, false)]
+    [InlineData(2, 3, false)]
+    [InlineData(15, 10, true)]
+    public void Mathematics_IsGreaterThan_Test(int num1, int num2, bool expected)
+    {
+        //Arrange
+
+        //Act
+        var actual = MathematicsService.IsGreaterThan(num1, num2);
+
+        //Assert
+        Assert.Equal(expected, actual);
+    }
 }

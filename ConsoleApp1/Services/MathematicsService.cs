@@ -57,4 +57,7 @@ public class MathematicsService
 
     }
     public static bool IsOdd(int num) => num % 2 != 0;
+
+    public static bool IsGreaterThan(int num1, int num2) => num1 > num2;
+    public static bool IsGreaterThanOrEqual(int num1, int num2) => num1 >= num2;
 }
