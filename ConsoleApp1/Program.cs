@@ -71,4 +71,4 @@ for (int i = 0; i < 10; i++)
         min = num;
 }
 
-Console.WriteLine(max);
+Console.WriteLine(min);
