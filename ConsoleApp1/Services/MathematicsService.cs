@@ -36,4 +36,25 @@ public class MathematicsService
     {
         return num - 1;
     }
+
+    public static bool IsEven(int num)
+    {
+        //1.
+        return num % 2 == 0;
+
+        //2.
+        //return num % 2 == 0 ? true : false;
+
+        //3.
+        //var isEven = num % 2 == 0;
+        //return isEven;
+
+        //4.
+        //if(num % 2 == 0)
+        //    return true;
+        //else
+        //    return false;
+
+    }
+    public static bool IsOdd(int num) => num % 2 != 0;
 }
