@@ -55,7 +55,7 @@ public class ArrayServiceTests
         // Assert
         Assert.Equal(expected, actual);
     }
-    
+
     [Theory]
     [InlineData(new int[] { 4, 2, 1 }, 1)] // Healthy Weight
     [InlineData(new int[] { 1, 2, 6, 5, 4 }, 1)] // Healthy Weight
@@ -79,11 +79,16 @@ public class ArrayServiceTests
 
         // Act
         var (actualSum, actualAverage, actualMin, actualMax) = ArrayService.GetSumAvgMaxMin(nums);
+        //var actualResult = ArrayService.GetSumAvgMaxMin(nums);
 
         // Assert
         Assert.Equal(expectedSum, actualSum);
         Assert.Equal(expectedAverage, actualAverage, 2);
         Assert.Equal(expectedMin, actualMin);
         Assert.Equal(expectedMax, actualMax);
+        //Assert.Equal(actualResult.sum, actualSum);
+        //Assert.Equal(actualResult.average, actualAverage, 2);
+        //Assert.Equal(actualResult.min, actualMin);
+        //Assert.Equal(actualResult.max, actualMax);
     }
 }
