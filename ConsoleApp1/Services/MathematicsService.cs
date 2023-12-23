@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1.Services;
+﻿using System.Xml;
+
+namespace ConsoleApp1.Services;
 
 public class MathematicsService
 {
@@ -60,4 +62,31 @@ public class MathematicsService
 
     public static bool IsGreaterThan(int num1, int num2) => num1 > num2;
     public static bool IsGreaterThanOrEqual(int num1, int num2) => num1 >= num2;
+
+    public static bool IsPrime(int num)
+    {
+        if (num == 1 || num == 2)
+            return true;
+
+        if(num % 2 == 0)
+            return false;
+
+        //var i = 2;
+        //while (i < num / 2)
+        //{
+        //    if (num % i == 0)
+        //        return false;
+
+        //    i++;
+        //}
+
+        for (var i = 2; i < num / 2; i++)
+            if (num % i == 0)
+                return false;
+
+        return true;
+    }
+
+
+
 }
